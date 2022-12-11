@@ -14,5 +14,7 @@ namespace BMSAPI.Repositories
 
         Task<bool> UpdateUserAsync(string userName, User userDetail);
 
+
+        Task<int> UserCredentialsAsync(string userName, string password);
     }
 }

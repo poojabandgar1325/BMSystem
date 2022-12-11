@@ -60,5 +60,16 @@ namespace BMSAPI.Repositories
 
             return true;
         }
+
+        public async Task<int> UserCredentialsAsync(string userName, string password)
+        {
+            User user =  bMSDbContext.Users?.Where(x => x.UserName == userName && x.Password == password).FirstOrDefault();
+            await bMSDbContext.SaveChangesAsync();
+            if (user != null)
+                return  user.Role;
+            else
+                return 2;
+            
+        }
     }
 }

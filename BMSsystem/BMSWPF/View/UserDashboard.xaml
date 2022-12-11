@@ -1,0 +1,55 @@
+﻿<Window x:Class="BMSWPF.View.UserDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMSWPF.View"
+        xmlns:viewmodel="clr-namespace:BMSWPF.ViewModel"
+        xmlns:view="clr-namespace:BMSWPF.View"
+        mc:Ignorable="d"
+        Title="UserDashboard" Height="350" Width="525">
+    <Window.Resources>
+        <DataTemplate x:Name="applyLoanTemplate" DataType="{x:Type viewmodel:ApplyLoanViewModel}">
+            <view:ApplyLoan DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="redViewTemplate" DataType="{x:Type viewmodel:RedViewModel}">
+            <view:RedView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="blueViewTemplate" DataType="{x:Type viewmodel:BlueViewModel}">
+            <view:BlueView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="orangeViewTemplate" DataType="{x:Type viewmodel:OrangeViewModel}">
+            <view:OrangeView DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Background="Gray" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
+            <StackPanel>
+                <Button Content="View Account" Click="View_Clicked"/>
+                <Button Content="Update Account" Click="Update_Clicked"/>
+                <Button Content="Apply Loan" Click="ApplyLoan_Clicked"/>
+                <Button Content="View Loan Details" Click="ViewLoan_Clicked"/>
+                <Button Content="Logout" />
+            </StackPanel>
+        </DockPanel>
+
+
+        <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}"/>
+    </Grid>
+</Window>

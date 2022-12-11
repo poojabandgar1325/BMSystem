@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ViewChanger.ViewModels
+namespace BMSWPF.ViewModel
 {
     public class RedViewModel
     {

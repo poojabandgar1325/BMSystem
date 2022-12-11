@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BMSWPF.ViewModel;
 
-namespace BMSWPF
+namespace BMSWPF.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ApplyLoan.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ApplyLoan : UserControl
     {
-        public MainWindow()
+        public ApplyLoan()
         {
             InitializeComponent();
         }
-
-        
     }
 }

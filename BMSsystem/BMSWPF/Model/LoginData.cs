@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BMSWPF.ViewModel
+namespace BMSWPF.Model
 {
-    public class OrangeViewModel
+    class LoginData
     {
+        public string UserName { get; set; }
+        public string Password { get; set; }
     }
 }
