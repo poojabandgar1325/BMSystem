@@ -13,7 +13,6 @@ namespace BMSAPI.Repositories
         public UserRepository(BMSDbContext bMSDbContext)
         {
             this.bMSDbContext = bMSDbContext;
-
         }
         public BMSDbContext bMSDbContext { get; }
 

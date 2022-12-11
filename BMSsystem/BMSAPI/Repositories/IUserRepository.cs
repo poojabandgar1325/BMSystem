@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BMSAPI.Repositories
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         Task<User> GetUserAsync(string userName);
        

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BMSAPI.Profiles
+namespace BMSAPI.Models.Profiles
 {
     public class UserProfile : Profile
     {

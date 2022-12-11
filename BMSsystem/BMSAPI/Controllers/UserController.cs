@@ -16,6 +16,7 @@ namespace BMSAPI.Controllers
         private readonly IUserRepository userRepository;
         private readonly IMapper mapper;
 
+
         public UserController(IUserRepository userRepository, IMapper mapper)
         {
             this.userRepository = userRepository;
@@ -23,9 +24,8 @@ namespace BMSAPI.Controllers
         }
 
         [HttpGet]
-
         [ActionName("GetUserAsync")]
-        public async Task<IActionResult> GetUserAsync(string userName)
+        public async Task<IActionResult> Get(string userName)
         {
             var user = await userRepository.GetUserAsync(userName);
 
